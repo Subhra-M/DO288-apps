@@ -11,7 +11,7 @@ config_s2i
 ######## CUSTOMIZATION STARTS HERE ############
 echo "-----> copy source code to root START"
 cp -Rf /tmp/src/*.html ./
-DATE=`date “+%Y-%m%d”`
+DATE=date “+%Y-%m%d”
 echo "----> info.html file creation START"
 
 echo "---> info page started on $DATE" >> ./info.html
