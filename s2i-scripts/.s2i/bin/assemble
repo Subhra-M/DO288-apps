@@ -12,7 +12,7 @@ config_s2i
 echo "-----> copy source code to root START"
 cp -Rf /tmp/src/*.html ./
 echo "----> info.html file creation START"
-DATE= `date "+%m-%d-%Y %H:%M %p"`
+DATE=date "+%b %d %Y @ %H:%M %p"
 echo "---> info page started on $DATE" >> ./info.html
 
 echo "--> application running on httpd server $HTTPD_VERSION" >> ./info.html
