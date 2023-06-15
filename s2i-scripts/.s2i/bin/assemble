@@ -11,7 +11,7 @@ config_s2i
 ######## CUSTOMIZATION STARTS HERE ############
 echo "-----> copy source code to root START"
 cp -Rf /tmp/src/*.html ./
-DATE = date "+%d %m %Y %H %M %p"
+DATE=date "+%d %m %Y %H %M %p"
 echo "creating info page"
 echo "application started at ${DATE}" >> info.html
 echo "application server version is ${HTTPD_VERSION}" >> info.html
