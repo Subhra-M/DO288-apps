@@ -10,7 +10,7 @@ config_s2i
 
 ######## CUSTOMIZATION STARTS HERE ############
 echo "-----> copy source code to root START"
-cp -RF /tmp/src/*.html /opt/apt-root/src/
+cp -Rf /tmp/src/*.html /opt/apt-root/src/
 DATE = date "+%d %m %Y %H %M %p"
 echo "creating info page"
 echo "application started at ${DATE}" >> info.html
