@@ -9,13 +9,14 @@ echo "---> Enabling s2i support in httpd24 image"
 config_s2i
 
 ######## CUSTOMIZATION STARTS HERE ############
-echo "-----> copy source code to root START"
+echo "---> Installing application source"
 cp -Rf /tmp/src/*.html ./
+
 DATE=date "+%b %d, %Y @ %H:%M %p"
-DATE1=date +"%d %b %Y %H %M %p"
-echo "creating info page"
-echo "application started at ${DATE}" >> info.html
-echo "application server version is ${HTTPD_VERSION}" >> info.html
+
+echo "---> Creating info page"
+echo "Page built on $DATE" >> ./info.html
+echo "Proudly served by Apache HTTP Server version $HTTPD_VERSION" >> ./info.html
 
 
 ######## CUSTOMIZATION ENDS HERE ############
