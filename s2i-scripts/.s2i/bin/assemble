@@ -12,12 +12,10 @@ config_s2i
 
 echo "---> Installing application source"
 cp -Rf /tmp/src/*.html ./
-DATE=`date "+%b%d, %Y @ %H:%M %p"`
-DATE1=`date "+%Y-%m%d"`
-echo "---> creating info.html"
-echo "The build date is $DATE and another format $DATE1" >> ./info.html	
-echo "Proudly served by Apache HTTP Server version $HTTPD_VERSION" >> ./info.html
-
+echo "info html started"
+DATE=`date "+%b %d , %Y @ %H : %M %p"`
+echo "app started on $DATE" >> info.html
+echo "server version is $HTTPD_VERSION" >> info.html
 ######## CUSTOMIZATION ENDS HERE ############
 
 if [ -d ./httpd-cfg ]; then
