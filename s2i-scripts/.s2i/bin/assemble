@@ -9,6 +9,11 @@ echo "---> Enabling s2i support in httpd24 image"
 config_s2i
 
 ######## CUSTOMIZATION STARTS HERE ############
+cp -Rf /tmp/src/*.html ./
+echo "creating info html"
+DATE=`date +"%d-%m-%Y @ %H:%M %p"`
+echo "server started at $DATE " >> ./info.html
+echo "server version is $HTTPD_VERSION" >> ./info.html
 
 ######## CUSTOMIZATION ENDS HERE ############
 
