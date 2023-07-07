@@ -10,12 +10,6 @@ config_s2i
 
 ######## CUSTOMIZATION STARTS HERE ############
 
-cp -Rf /tmp/src/*.html ./
-echo "info html START"
-DATE=`date "+%d-%m-%Y @ %H:%M @p"`
-echo "server started on $DATE " >> ./info.html
-echo "server running on version $HTTPD_VERSION " >> ./info.html
-
 ######## CUSTOMIZATION ENDS HERE ############
 
 if [ -d ./httpd-cfg ]; then
